@@ -28,9 +28,3 @@ nodeswitch list
 
 nodeswitch path
 ```
-
-#### How To Uninstall
-
-```
-???
-```
