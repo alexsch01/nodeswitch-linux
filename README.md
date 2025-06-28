@@ -7,7 +7,7 @@ Node version switcher for Linux x64
 #### How To Install
 
 ```
-TODO
+curl -s https://raw.githubusercontent.com/alexsch01/nodeswitch-linux/main/install | sh
 ```
 
 #### Examples
