@@ -2,15 +2,12 @@
 
 Node version switcher for Linux x64
 
-<br>
-
-#### How To Install
-
+### How To Install
 ```
 curl -s https://raw.githubusercontent.com/alexsch01/nodeswitch-linux/main/install | sh
 ```
 
-#### Examples
+### Examples
 
 ```
 nodeswitch add 12.16.3
