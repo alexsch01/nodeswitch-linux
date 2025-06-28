@@ -1,6 +1,6 @@
 # nodeswitch-linux
 
-Node version switcher for Linux x64
+Node version switcher for Linux
 
 ### How To Install
 ```
