@@ -1,5 +1,4 @@
 LOCAL_SHARE="$HOME/.local/share"
-mkdir -p "$LOCAL_SHARE/nodeswitch"
 
 if [ "$1" != "" ]
 then
