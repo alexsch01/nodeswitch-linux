@@ -7,8 +7,8 @@ curl -s https://raw.githubusercontent.com/alexsch01/nodeswitch-linux/main/nodesw
 curl -s https://raw.githubusercontent.com/alexsch01/nodeswitch-linux/main/nodeswitch.sh > "$HOME/.local/bin/nodeswitch.sh"
 chmod +x "$HOME/.local/bin/nodeswitch"
 
-if ! grep -R 'alias nodeswitch="source nodeswitch.sh"' "$HOME/.bashrc" > /dev/null; then
-        echo 'alias nodeswitch="source nodeswitch.sh"' >> "$HOME/.bashrc"
+if ! grep -R 'alias nodeswitch=' "$HOME/.bashrc" > /dev/null; then
+        echo 'alias nodeswitch="source nodeswitch"' >> "$HOME/.bashrc"
 fi
 
 echo "nodeswitch program install finished"
