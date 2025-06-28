@@ -6,7 +6,6 @@ mkdir -p "$HOME/.local/bin"
 curl -s https://raw.githubusercontent.com/alexsch01/nodeswitch-linux/main/nodeswitch > "$HOME/.local/bin/nodeswitch"
 curl -s https://raw.githubusercontent.com/alexsch01/nodeswitch-linux/main/nodeswitch.sh > "$HOME/.local/bin/nodeswitch.sh"
 chmod +x "$HOME/.local/bin/nodeswitch"
-chmod +x "$HOME/.local/bin/nodeswitch.sh"
 
 if ! grep -R 'alias nodeswitch="source nodeswitch.sh"' "$HOME/.bashrc" > /dev/null; then
         echo 'alias nodeswitch="source nodeswitch.sh"' >> "$HOME/.bashrc"
