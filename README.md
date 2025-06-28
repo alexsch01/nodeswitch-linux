@@ -8,7 +8,6 @@ curl -s https://raw.githubusercontent.com/alexsch01/nodeswitch-linux/main/instal
 ```
 
 ### Examples
-
 ```
 nodeswitch add 12.16.3
 nodeswitch add 18.13.0
