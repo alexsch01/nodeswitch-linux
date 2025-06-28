@@ -1,0 +1,1 @@
+(return 0 2>/dev/null) && source nodeswitch.sh "$@" || echo "You need to relaunch bash in order to use nodeswitch"
