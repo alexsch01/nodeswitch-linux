@@ -7,7 +7,7 @@ elif [ "$nodeswitchUnameM" = "aarch64" ]; then
     nodeswitchArch=arm64
 else
     echo "ARCH not supported"
-    return 1
+    return
 fi
 
 if [ "$1" != "" ]; then
@@ -47,7 +47,7 @@ if [ "$1" != "" ]; then
                         if [ $? -ne 0 ]; then
                             rm "$nodeswitchLocalShare/nodeswitch/$2.xz"
                             echo "Node version not created"
-                            return 1
+                            return
                         fi
 
                         tar -xf "$nodeswitchLocalShare/nodeswitch/$2.xz" -C "$nodeswitchLocalShare/nodeswitch" > /dev/null
@@ -56,7 +56,7 @@ if [ "$1" != "" ]; then
                             rm "$nodeswitchLocalShare/nodeswitch/$2.xz"
                             rm -rf "$nodeswitchLocalShare/nodeswitch/node-v$2-linux-$nodeswitchArch"
                             echo "Node version not created"
-                            return 1
+                            return
                         fi
 
                         rm "$nodeswitchLocalShare/nodeswitch/$2.xz"
