@@ -30,9 +30,9 @@ if [ "$1" != "" ]; then
                     if [ -d "$nodeswitchLocalShare/nodeswitch/$2" ]; then
                         if [ -z "$nodeswitchDefaultPATH" ]; then
                             export nodeswitchDefaultPATH="$PATH"
-                            export PATH="$nodeswitchLocalShare/nodeswitch/$2/bin:$PATH"
+                            export PATH="$nodeswitchLocalShare/nodeswitch/$2/globalPrefix/bin:$nodeswitchLocalShare/nodeswitch/$2/bin:$PATH"
                         else
-                            export PATH="$nodeswitchLocalShare/nodeswitch/$2/bin:$nodeswitchDefaultPATH"
+                            export PATH="$nodeswitchLocalShare/nodeswitch/$2/globalPrefix/bin:$nodeswitchLocalShare/nodeswitch/$2/bin:$nodeswitchDefaultPATH"
                         fi
                     else
                         echo "Node version not installed"
