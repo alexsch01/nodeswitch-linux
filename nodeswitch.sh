@@ -62,9 +62,8 @@ if [ "$1" != "" ]; then
                         rm "$nodeswitchLocalShare/nodeswitch/$2.xz"
                         mv "$nodeswitchLocalShare/nodeswitch/node-v$2-linux-$nodeswitchArch" "$nodeswitchLocalShare/nodeswitch/$2"
 
-                        mkdir "$nodeswitchLocalShare/nodeswitch/$2/etc"
                         mkdir -p "$nodeswitchLocalShare/nodeswitch/$2/globalPrefix/lib"
-                        echo "prefix=$nodeswitchLocalShare/nodeswitch/$2/globalPrefix" > "$nodeswitchLocalShare/nodeswitch/$2/etc/npmrc"
+                        echo "prefix=$nodeswitchLocalShare/nodeswitch/$2/globalPrefix" > "$nodeswitchLocalShare/nodeswitch/$2/node_modules/npm/npmrc"
                     else
                         echo "Node version not found"
                     fi
