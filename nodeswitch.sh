@@ -1,14 +1,4 @@
 nodeswitchLocalShare="$HOME/.local/share"
-nodeswitchUnameM=$(uname -m)
-
-if [ "$nodeswitchUnameM" = "x86_64" ]; then
-    nodeswitchArch=x64
-elif [ "$nodeswitchUnameM" = "aarch64" ]; then
-    nodeswitchArch=arm64
-else
-    echo "ARCH not supported"
-    return
-fi
 
 if [ "$1" != "" ]; then
     if [ "$2" != "" ]; then
@@ -39,6 +29,13 @@ if [ "$1" != "" ]; then
                     fi
                 fi
             elif [ "$1" = "add" ]; then
+                nodeswitchUnameM=$(uname -m)
+                if [ "$nodeswitchUnameM" = "aarch64" ]; then
+                    nodeswitchArch=arm64
+                else
+                    nodeswitchArch=x64
+                fi
+
                 if [ ! -d "$nodeswitchLocalShare/nodeswitch/$2" ]; then
                     curl -f https://nodejs.org/download/release/v$2/ &>/dev/null
                     if [ $? -eq 0 ]; then
