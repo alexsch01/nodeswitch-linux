@@ -30,6 +30,7 @@ if [ "$1" != "" ]; then
                 fi
             elif [ "$1" = "add" ]; then
                 nodeswitchUnameM=$(uname -m)
+
                 if [ "$nodeswitchUnameM" = "aarch64" ]; then
                     nodeswitchArch=arm64
                 else
