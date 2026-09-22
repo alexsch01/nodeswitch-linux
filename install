@@ -1,5 +1,11 @@
 #!/bin/sh
 
+nodeswitchUnameM=$(uname -m)
+if [ "$nodeswitchUnameM" != "x86_64" ] && [ "$nodeswitchUnameM" != "aarch64" ]; then
+    echo "This utility is only for Linux x64 and ARM64"
+    exit 1
+fi
+
 mkdir -p "$HOME/.local/share/nodeswitch"
 
 mkdir -p "$HOME/.local/bin"
